@@ -1,0 +1,12 @@
+﻿@model List<LinqBuild.Models.Course>
+
+<h2>Select a Course for Editing</h2>
+
+<ul>
+    @foreach (var course in Model)
+    {
+        <li>
+            <a asp-action="EditCourse" asp-route-id="@course.CourseId">@course.CourseName</a>
+        </li>
+    }
+</ul>

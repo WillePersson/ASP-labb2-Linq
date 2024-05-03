@@ -1,0 +1,17 @@
+﻿@model IEnumerable<LinqBuild.Models.Course>
+
+@{
+    ViewData["Title"] = "Select Course";
+}
+
+<h2>Select a Course</h2>
+
+<ul class="list-group">
+    @foreach (var course in Model)
+    {
+        <li class="list-group-item">
+            @Html.ActionLink(course.CourseName, "ShowStudentsAndTeachersInCourse", new { id = course.CourseId }, new { @class = "list-group-item list-group-item-action" })
+        </li>
+    }
+</ul>
+

@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Course Operations";
+}
+
+<h2>Course Operations</h2>
+
+<div class="list-group">
+    <a class="list-group-item list-group-item-action" asp-action="StudentsTeachers" asp-controller="Courses">
+        View All Students and Their Teachers
+    </a>
+    <a class="list-group-item list-group-item-action" asp-action="SelectCourseForStudentsAndTeachers" asp-controller="Courses">
+        View Students and Teachers in Course
+    </a>
+    <a class="list-group-item list-group-item-action" asp-action="SelectCourseForEditing" asp-controller="Courses">
+        Edit a Course Name/Teacher
+    </a>
+</div>

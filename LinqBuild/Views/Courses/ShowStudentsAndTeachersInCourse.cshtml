@@ -1,0 +1,22 @@
+﻿@model LinqBuild.Models.Course
+
+<h1>Course Details</h1>
+<p><strong>Course Name:</strong> @Model.CourseName</p>
+
+<h2>Students Enrolled:</h2>
+<ul>
+    @foreach (var studentCourse in Model.StudentCourses)
+    {
+        <li>@studentCourse.Student.Name</li>
+    }
+</ul>
+
+<h2>Teachers Assigned:</h2>
+<ul>
+    @foreach (var teacherCourse in Model.TeacherCourses)
+    {
+        <li>@teacherCourse.Teacher.Name</li>
+    }
+</ul>
+
+<a asp-action="Operations">Back to Courses</a>
